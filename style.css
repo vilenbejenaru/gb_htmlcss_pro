@@ -1,0 +1,725 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap'); /*импорт гугл-шрифтов*/
+
+body {
+    margin: 0; 
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.container {  /* блок для всего сайта, ширина соответствует сетке bootstrap */
+    width: 1140px;
+    margin: 0 auto;
+    
+}
+.header {
+    /* width: 1600px;  */
+    height: 100px;
+    border-bottom: 1px solid #ececec;
+    
+}
+
+.header .container { /*если контейнер находится в хедере*/
+    height: inherit; /*хедер наследует высоту контейнера*/ 
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo { 
+    background: url(images/logo.png) no-repeat;/*прописываем картинку в качестве логотипа*/
+    padding-left: 72px; /*картинка и текст в одном блоке-> для текста задается отступ слева */
+    height: 51px;
+    width: 170px; /*ширина блока логотипа с картинкой, отступом и текстом*/
+    display: flex; /*!!! для применения размера к строчным элементам*/
+    align-items: center;
+    text-decoration: none;
+    font-size: 27px;
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #222222;
+    box-sizing: border-box;
+
+}
+
+.logo span {
+    font-weight: 900;
+    color: #f16d7f;
+}
+
+.headerSearchForm {
+    margin-left: 37px;
+    display: flex;
+}
+
+.headerBrowse {
+    width: 87px;
+    background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+    border: 1px solid #e6e6e6;
+    border-radius: 3px 0px 0px 3px;
+    display: flex;
+    justify-content: center; /*по горизонтали*/
+    align-items: center; /*по вертикали*/
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #222222;
+}
+
+.headerBrowse i {
+    margin-left: 8px;
+}
+
+.headerSearchForm input {
+    width: 317px;
+    background-color: #ffffff;
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.headerSearchForm button {
+    width: 36px;
+    height: 38px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 14px;
+    line-height: 32px;
+    letter-spacing: 0.025em;
+    color: #a4a4a4;
+}
+
+.headerCart {
+    margin-left: auto; /* работает только во флекс-контейнере изначально в макете= 349px */
+}
+
+.accountButton {
+    margin-left: 25px;
+    width: 130px;
+    height: 38px;
+    background-color: #f16d7f;
+    border: none;
+    font-size: 15px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+}
+
+.accountButton i {
+    margin-left: 8px;
+}
+
+.topNav {
+    height: 50px;
+    display: flex;
+    justify-content: center; /*более правильный и универсальный выбор, чем space-between*/
+    align-items: center;
+    
+}
+
+.topNav a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.topNav a:not(:last-child) { /*для всех ссылок а из topnav, КРОМЕ последней; в псевдоклассе not можно указать любой исключающий признак*/
+    margin-right: 40px;
+}
+
+.promo {
+    height: 615px;
+    background-color: #e8e8e8;
+
+}
+
+.promo .container {
+    height: inherit; /* наследует высоту родителя*/
+    /* box-shadow: 0 0 10px inset gray; тень внутрь элемента */
+    background: url(images/topHeaderBack.png) no-repeat;
+    background-position: right 40px top 5px  ; /*ось из правого нижнего угла*/
+    background-size: 550px ;
+    display: flex;
+    align-items: center;
+}
+
+.promoSlogan {
+    border-left:  12px solid #f16d7f;
+    height: 92px;
+    padding-left: 12px;
+    font-weight: 900;
+    letter-spacing: 0.025em;
+    color: #222222;
+}
+
+.promoText1 { /*наследует стили родителя и добавляет свои*/
+    font-size: 60px;
+    line-height: 42px;
+    font-weight: 900;
+    letter-spacing: 0.025em;
+   
+}
+
+.promoText2 {
+    font-size: 40px;
+    line-height: 28 px;
+    margin-top: 10px;
+   /* space-between  тоже выходит за границы родителя*/
+}
+
+.promoText2 span { /*выделяем span*/
+    color: #f16d7f;
+}
+
+.offers {
+    margin-top: 100px;
+}
+
+.offers .container {
+    position: relative;
+    /* относительно  этого блока relative будут располагаться дочерние элементы с четкми  координатами absolute */
+}
+
+.offer1 {
+    width: 560px;
+    height: 542px;
+    background: url(images/offer1.jpg) no-repeat;
+}
+
+.offerLabel {
+    background: white;
+    padding: 16px;
+    display: inline-block; /*не будет растягиваться на всю длину*/
+    margin-top: 26px;
+}
+
+.offerLabelTop{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #222222;
+
+}
+
+.offerLabelBottom {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #f16d7f;
+    font-weight: 900;
+
+}
+
+.offer2 {
+    width: 560px;
+    height: 261px;
+    margin-top: 20px;
+    background: url(images/offer2.jpg) no-repeat;
+   
+}
+
+.offer3 {
+    width: 560px;
+    height: 261px;
+    background: url(images/offer3.jpg) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.offer4 {
+    width: 560px;
+    height: 542px;
+    margin-top: 20px;
+    background: url(images/offer4.jpg) no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.featuredItemsWrap {
+    margin-top: 100px;
+    
+}
+
+.featuredTitle {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #222222;
+    text-align: center;
+
+}
+
+.featuredText{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #9f9f9f;
+    text-align: center;
+    margin-top: 16px;
+
+}
+
+.featuredItems {
+    margin-top: 60px;
+}
+
+.featuredItems:after { /* для появления тела блока */
+    content: '';
+    display: block;
+    clear: both; /*запрещает пересечение с другими элементами из блока*/
+}
+
+.featuredItem {
+    width: 263px;
+    height: 364px;
+    float: left;
+}
+
+.featuredItem:not(:nth-child(4n)) { /*всем элементам блока, кроме 4n**/
+    margin-right: 28px;
+}
+
+.featuredItem:nth-child(n+5) { /* всем элементам блока, начиная с 5-го*/
+    margin-top: 39px;
+
+}
+
+.featuredImgWrap { /*обертка товара с фото и характеристиками; относительно нее позиционируем вложенные элементы*/
+    position: relative;
+    height: 280px;
+}
+
+.featuredBuy { /*затемнение появляется при наведении на весь родительскийй блок и наследует его высоту*/
+    height: inherit;
+    width: 100%;
+    background: rgba(58,56,56,0.83);
+    display: none;
+    position: absolute; /*выводит затемнение сверху*/
+}
+
+/*
+.featuredItem:hover {
+    box-shadow: 0 5px 8px rgba(58,56,56,0.83);
+}*/
+
+.featuredItem:hover .featuredBuy { /* ложный элемент, при наведении на родителя появляется вложенная затемненная область*/
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featuredBuy button {
+    width: 123px;
+    height: 39px;
+    border: 1px solid #ffffff;
+    background: none;
+    color: white;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+
+}
+
+.featureDescription {
+    margin-top: 20px;
+    padding: 10px;
+    display: block;
+}
+
+.featuredName {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.featuredPrice {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
+
+.featuredAllItemsBtn {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.featuredAllItemsBtn button {
+
+    background-color: #f16d7f;
+    font-size: 16px;
+    line-height: 54px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    border: none;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+}
+.featuredAllItemsBtn button i {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.offerForWomen {
+    margin-top: 100px;
+    height: 530px;
+    display: flex;
+}
+
+.offerForWomenBanner {
+    width: 767px;
+    height: inherit; /* наследуется от родителя*/
+    background: url(images/offerForWomen.jpg); 
+    background-size: cover;
+    position: relative;
+    float: left;
+}
+
+.offerDetails { /*элементы внутри будут блочными - один под другим*/
+    width: 373px;
+    background-color: #222224;
+    color: #fbfbfb;
+    float: right;
+}
+
+.offerText {
+    position: absolute; /* положение задается относительно родителя*/
+    top: 146px;
+    left: 40px;
+    font-size: 53.7px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+}
+
+.offerText div:first-child span { /*для span из первого div в блоке*/
+    color: #f16d7f;
+}
+
+.offerText div:last-child { /* стиль для последнего div в блоке */
+    font-size: 32.2px;
+}
+
+.offerUnit {
+    height: 175px;
+    padding: 30px 30px 30px 110px; /* для предотвращения выхода текста за границы; слева - для картинки*/
+    box-sizing: border-box; /*паддинги не учитываются в размере*/
+    /*flex-grow: 1; /*степень жадности - элементы будут занимать все свободное пространство в блоке*/
+} 
+
+.offerUnit:first-child {
+    background: url(images/offerDetails1.png) no-repeat;
+    background-position: 30px 40px;
+}
+
+.offerUnit:nth-child(2) { /*стиль для второго элемента в блоке*/
+    background: url(images/offerDetails2.png) no-repeat;
+    background-position: 30px 40px;
+}
+
+.offerUnit:nth-child(3) {
+    background: url(images/offerDetails3.png) no-repeat;
+    background-position: 30px 40px;
+}
+
+.offerDetailsTitle {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #fbfbfb;
+    margin-bottom: 17px;
+}
+
+.offerDetailsText {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #fbfbfb;
+}
+
+.subscribeWrap { /*блочный элемент без ширина растягивается по размеру родителя*/
+    height: 438px;
+    background: url(images/subscribe.jpg) no-repeat center bottom #ccc; /*наложение эффекта на картинку цвет идет последним*/
+    margin-top: 100px;
+    background-size: cover;
+    background-blend-mode: overlay; 
+}
+
+.subscribe {
+    display: flex;
+    height: inherit;
+}
+
+.reviews {
+    
+    display: flex;
+    align-items: center;
+    border-right: #f16d7f;
+}
+
+.subscribeDivider {
+    width: 2px;
+    background: #e3e3e3;
+}
+
+.reviews, .subscribeRight {
+    width: calc(50% - 1px);
+}
+.reviewUnit {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviewUnitLeft {
+    width: 83px;
+}
+
+.reviewUnitRight {
+    width: 386px;
+
+}
+
+.reviewUnitRight blockquote {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.025em;
+    color: #222224;
+    margin-left: 0;
+}
+
+.reviewerName {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #f16d7f;
+}
+
+.reviewerFrom {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    color: #222224;
+}
+
+.reviewSwitch {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.reviewSwitch div {
+    width: 38px;
+height: 4px;
+background-color: #d6d6d6;;
+}
+
+.reviewSwitch div:hover {
+    background-color: #c55959;
+}
+
+.subscribeRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribeRightTitle {
+    font-size: 24px;
+    line-height: 54px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #222224;
+}
+
+.subscribeRightText {
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: none;
+    margin-bottom: 35px;
+}
+
+.subscribeForm {
+    height: 46px;
+}
+
+.subscribeForm input {
+    width: 334px;
+    height: inherit;
+    border: none;
+    opacity: 0.67;
+    font-size: 14px;
+    line-height: 54px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #222224;
+    background-color: #e1e1e1;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    padding-left: 28px;
+    float: left; /*для прижатия двух блочно-строчных элементов, кнопки к инпуту*/
+}
+
+.subscribeForm button {
+    
+    height: inherit;
+    background-color: #f16d7f;
+    border-radius: 0px 23px 23px 0px;
+    border: none;
+    color: white;
+    padding: 0 20px;
+}
+
+footer {
+    margin-top: 100px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.footerBrand {
+     width: 430px;
+     height: 180px;
+}
+
+/* вставлена ссылка и стили из хедера  */
+/* .footerBrandTitle{
+    font-size: 27px;
+    line-height: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #3e3e40;
+}
+
+.footerBrandTitle span {
+    font-weight: 900;
+    color: #f16d7f;
+    
+} */
+
+.footerBrandText{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #898989;
+    margin-top: 41px;
+    
+}
+
+.footerColumn{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footerColumnTitle {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #f16d7f;
+    text-transform: uppercase;
+
+}
+
+.footerColumnText {
+    margin-top: 41px;
+    
+}
+
+.footerColumnText a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #898989;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerColumnText a:hover {
+    color: #f16d7f;
+}
+
+.copyright {
+    height: 79px;
+    background-color: #e6e6e6;
+}
+
+.copyrightWrap {
+    font-size: 16px;
+    line-height: 42px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #7a7a7a;
+    height: inherit;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyrightText {
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyrightSocial {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;    
+    color: #b2b2b2;
+}
+
+.copyrightSocial a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.copyrightSocial i { /*стилизация социальных иконок*/
+    width: 32px;
+    height: 32px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.copyrightSocial i:hover {
+    color: white;
+    background-color: #f16d7f;
+}
