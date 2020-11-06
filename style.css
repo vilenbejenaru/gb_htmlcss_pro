@@ -120,7 +120,6 @@ body {
     display: flex;
     justify-content: center; /*более правильный и универсальный выбор, чем space-between*/
     align-items: center;
-    
 }
 
 .topNav a {
@@ -130,6 +129,12 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: #222222;
+    
+
+}
+
+.topNav a:hover {
+    border-bottom: 3px solid #f16d7f;
 }
 
 .topNav a:not(:last-child) { /*для всех ссылок а из topnav, КРОМЕ последней; в псевдоклассе not можно указать любой исключающий признак*/
@@ -722,4 +727,402 @@ footer {
 .copyrightSocial i:hover {
     color: white;
     background-color: #f16d7f;
+}
+
+
+/* ------------- styles for new arrivals page --------------- */
+
+.newArrivalsWrap {
+    height: 148px;
+    background-color: #f8f3f4;
+}
+
+.newArrivals {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newArrivalsTitle {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
+
+.newArrivalsLinks {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newArrivalsLinks a {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #636363;
+    text-decoration: none;
+}
+
+.newArrivalsLinks a:hover {
+    font-weight: 700;
+    color: #f16d7f;
+}
+
+.shoppingTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.shoppingTableRow {
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.shoppingTableRow div:first-child{   /*  перед div можно вставить '>' - непосредственное родство элементов */
+    width: 460px;
+}
+
+.shoppingTableRow div:not :first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoppingTableRowHead {
+    height: 32px;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    color: #222222;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.productDetails {
+    display: flex;
+}
+
+.productDetails img {
+    margin-right: 21px;
+}
+
+.productAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+
+}
+
+.productAbout a {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.productAbout a:hover {
+    color: #f16d7f;
+}
+.productStyle {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #575757;
+}
+
+.productStyle span {
+    font-weight: 300;
+color: #6f6e6e;
+}
+
+.productQuantity input {
+    width: 54px;
+    height: 30px;
+    border: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.productAction i{
+    color: #c0c0c0;
+}
+
+.productAction i:hover{
+    color: #f16d7f;
+}
+
+.shoppingButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shopingButtonClear {
+    width: 235px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;    
+}
+
+.shopingButtonClear a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;  
+}
+
+.shopingButtonClear a:hover {
+    color: #f16d7f;
+}
+
+.shopingButtonContinue {
+    width: 225px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+
+.shopingButtonContinue a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.shopingButtonContinue a:hover {
+    color: #f16d7f;
+}
+    
+.shoppingCheckout {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoppingCheckoutAddress {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.shoppingCheckoutAddress h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+
+.shoppingCheckoutAddress address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.shoppingCheckoutAddress address select {
+    
+    height: 45px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #b1b1b1;
+    padding-left: 18px;
+}
+
+/* сначала инпуты отображались, как на макетеб и как селект , но потом что-то полшло не так*/
+/* стили одинаковые, а отображение разное */
+/* update - ошибка нашел - неправильно прописал ширину рамки */
+
+
+.shoppingCheckoutAddress address input {
+    
+    height: 45px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #b1b1b1;
+    padding-left: 18px;
+    
+}
+
+.shoppingCheckoutAddress button {
+    width: 100px;
+    height: 35px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    
+}
+
+.shoppingCheckoutAddress button a {
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.shoppingCheckoutAddress button a:hover {
+    color: #f16d7f;
+}
+
+.shoppingCheckoutCoupon {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    
+
+}
+
+.shoppingCheckoutCoupon h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.shoppingCheckoutCoupon p {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #000000;
+}
+
+.shoppingCheckoutCoupon input {
+    height: 45px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #b1b1b1;
+    padding-left: 18px;
+}
+
+.shoppingCheckoutCoupon button {
+    width: 120px;
+    height: 35px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+.shoppingCheckoutCoupon button a {
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.shoppingCheckoutCoupon button a:hover {
+    color: #f16d7f;
+}
+
+.shoppingCheckoutTotal {
+    width: 360px;
+    height: 214px;
+    background-color: #f5f3f3;
+    padding: 40px;
+    box-sizing: border-box; 
+
+}
+
+.shoppingCheckoutTotalCount {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+.shoppingCheckoutTotalSub {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+
+.shoppingCheckoutTotalGrand {
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-bottom: 14px;   
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase; 
+}
+
+.shoppingCheckoutTotalGrandSumm {
+    color: #f16d7f;
+}
+
+.shoppingCheckoutDivider {
+    width: 275px;
+    height: 1px;
+    background-color: #e2e2e2;
+}
+
+.shoppingCheckoutTotal button {
+    width: 270px;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f16d7f;
+    border: 1px solid #eaeaea;
+}
+
+.shoppingCheckoutTotal button a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;  
+}
+
+.shoppingCheckoutTotal button a:hover {
+    color: #b1b1b1;
+    
 }
