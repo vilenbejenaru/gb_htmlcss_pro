@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- импорт стиля для текстовых иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo">BRAN<span>D</span></a>
+            <form class="headerSearchForm">
+                <div class="headerBrowse">
+                    Browse <i class="fas fa-caret-down"></i> <!-- ссылка на векторную икону  -->
+                </div>
+                <input type="text" placeholder="Search for Item...">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+            <img class="headerCart" src="images/cart.png" alt="cart">
+            <button class="accountButton">
+                My Account
+                <i class="fas fa-caret-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="topNav">
+        <!-- для одновременного выделения и редактирования alt+shift ; передвигаться стрелками, в конец каждой строки end-->
+        <a href="#">Home</a>
+        <a href="#">Man</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Accoseriese</a>
+        <a href="#">Featured</a>
+        <a href="#">Hot Deals</a>
+    </div>
+
+    <div class="newArrivalsWrap">
+        <div class="container newArrivals">
+            <div class="newArrivalsTitle">
+                New Arrivals
+            </div>
+            <!-- для навигации используем семантический тег -->
+            <nav class="newArrivalsLinks">
+                <a href="#" target="blank">Home</a> /
+                <a href="#" target="blank">Men</a> /
+                <a href="#" target="blank">New Arrivals</a>
+            </nav>
+
+        </div>
+
+
+    </div>
+
+    <div class="container shoppingTable">
+        <!-- таблицу с товарами делим сначала на строки, затем создаем блоки-колонки -->
+        <div class="shoppingTableRow shoppingTableRowHead">
+            <div class="shoppingTableRowDetails">
+                Product Details
+            </div>
+            <div class="shoppingTableRowPrice">
+                unite Price
+            </div>
+            <div class="shoppingTableRowQuantity">
+                Quantity
+            </div>
+            <div class="shoppingTableRowShip">
+                Shipping
+            </div>
+            <div class="shoppingTableRowSubtotal">
+                Subtotal
+            </div>
+            <div class="shoppingTableRowAction">
+                ACTION
+            </div>
+        </div>
+
+        <div class="shoppingTableRow ">
+            <!-- нужно было создать семантический тег section -->
+            <div class="productDetails">
+                <img src="images/product1.png" alt="product">
+                <div class="productAbout">
+                    <a href="#">Mango People T-shirt</a>
+                    <div class="productStyle">
+                        color <span>red</span> <br>
+                        size <span>XII</span>
+                    </div>
+                </div>
+            </div>
+            <div class="productPrice">
+                150$
+            </div>
+            <div class="productQuantity">
+                <input type="number" placeholder="2">
+            </div>
+            <div class="productShip">
+                free
+            </div>
+            <div class="productPrice">
+                300$
+            </div>
+            <div class="productAction">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+        <div class="shoppingTableRow ">
+            <div class="productDetails">
+                <img src="images/product2.png" alt="product">
+                <div class="productAbout">
+                    <a href="#">Mango People T-shirt</a>
+                    <div class="productStyle">
+                        color <span>red</span> <br>
+                        size <span>XII</span>
+                    </div>
+                </div>
+            </div>
+            <div class="productPrice">
+                150$
+            </div>
+            <div class="productQuantity">
+                <input type="number" placeholder="2">
+            </div>
+            <div class="productShip">
+                free
+            </div>
+            <div class="productPrice">
+                300$
+            </div>
+            <div class="productAction">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+        <div class="shoppingTableRow ">
+            <div class="productDetails">
+                <img src="images/product3.png" alt="product">
+                <div class="productAbout">
+                    <a href="#">Mango People T-shirt</a>
+                    <div class="productStyle">
+                        color <span>red</span> <br>
+                        size <span>XII</span>
+                    </div>
+                </div>
+            </div>
+            <div class="productPrice">
+                150$
+            </div>
+            <div class="productQuantity">
+                <input type="number" placeholder="2">
+            </div>
+            <div class="productShip">
+                free
+            </div>
+            <div class="productTotal">
+                300$
+            </div>
+            <div class="productAction">
+                <i class="fas fa-times-circle"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="container shoppingButtons">
+        <button class="shopingButtonClear">
+            <a href="#">cLEAR SHOPPING CART</a>
+        </button>
+        <button class="shopingButtonContinue">
+            <a href="#">cONTINUE sHOPPING</a>
+        </button>
+
+    </div>
+
+    <div class="container shoppingCheckout">
+        <section class="shoppingCheckoutAddress">
+            <h2> Shipping Adress </h2>
+            <address>
+                <select name="Country" id="countryId">
+                    <option>Bangladesh</option>
+                    <option>India</option>
+                    <option>Pakistan</option>
+                </select>
+
+                <!-- стили для input не отображаются корректно -->
+                <input type="text" placeholder="State">
+                <input type="number" placeholder="Postcode / ZIP">
+
+
+                <!-- update - ошибку нашел, поэтому решил оставить input -->
+                <!-- <select name="State" id="stateId">
+                    <option>State</option>
+                    <option>State1</option>
+                    <option>State2</option>
+                </select>
+                <select name="Zip" id="ZipId">
+                    <option>Zip</option>
+                    <option>Zip1</option>
+                    <option>Zip2</option>
+                </select> -->
+            </address>
+            <button>
+                <a href="#">get a quote</a>
+            </button>
+        </section>
+        <section class="shoppingCheckoutCoupon">
+            <h2> coupon discount </h2>
+            <p>Enter your coupon code if you have one</p>
+            <input type="text" name="coupon" id="couponID">
+            <button>
+                <a href="#">Apply coupon</a>
+            </button>
+        </section>
+        <section class="shoppingCheckoutTotal">
+            <div class="shoppingCheckoutTotalCount">
+                <div class="shoppingCheckoutTotalSub">
+                    <div class="shoppingCheckoutTotalSubText">Sub total</div>
+                    <div class="shoppingCheckoutTotalSubSumm">$900</div>
+                </div>
+                <!-- еще несколько вложенных блоков и название класса будет длиннее, чем описание стиля. надо сокращать/прекращать -->
+
+                <div class="shoppingCheckoutTotalGrand">
+                    <div class="shoppingCheckoutTotalGrandText">GRAND TOTAL</div>
+                    <div class="shoppingCheckoutTotalGrandSumm">$900</div>
+                </div>
+            </div>
+            <hr class="shoppingCheckoutDivider">
+            <button>
+                <a href="#">proceed to checkout</a>
+            </button>
+        </section>
+    </div>
+
+    <div class="subscribeWrap">
+        <div class="container subscribe">
+            <div class="reviews">
+                <div class="reviewUnit">
+                    <div class="reviewUnitLeft">
+                        <img src="images/reviewPerson.png" alt="pesrson">
+                    </div>
+                    <div class="reviewUnitRight">
+                        <blockquote>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                            a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</blockquote>
+                        <div class="reviewerName">
+                            Bin Burhan
+                        </div>
+                        <div class="reviewerFrom">
+                            Dhaka, Bd
+                        </div>
+                        <div class="reviewSwitch">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribeDivider">
+
+            </div>
+            <div class="subscribeRight">
+                <div class="subscribeRightTitle">
+                    Subscribe
+                </div>
+                <div class="subscribeRightText">
+                    FOR OUR NEWLETTER AND PROMOTION
+                </div>
+                <form class="subscribeForm" action="">
+                    <input placeholder="Enter your e-mail" type="text">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="container">
+        <div class="footerBrand">
+            <a href="#" class="logo">BRAN<span>D</span></a>
+            <div class="footerBrandText">
+                Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate
+                multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of
+                processes and cross-unit partnerships. <br><br>
+
+                Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+
+            </div>
+
+        </div>
+        <div class="footerColumn">
+            <div class="footerColumnTitle">
+                COMPANY
+            </div>
+            <div class="footerColumnText">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">How it works</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footerColumn">
+            <div class="footerColumnTitle">
+                Information
+            </div>
+            <div class="footerColumnText">
+                <a href="#">Tearms & Condition</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">How to Buy</a>
+                <a href="#">How to Sell</a>
+                <a href="#">Promotion</a>
+            </div>
+        </div>
+        <div class="footerColumn">
+            <div class="footerColumnTitle">
+                SHOP CATEGORY
+            </div>
+            <div class="footerColumnText">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Child</a>
+                <a href="#">Apparel</a>
+                <a href="#">Browse all</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container copyrightWrap">
+            <div class="copyrightText">
+                © 2017 Brand All Rights Reserved.
+            </div>
+            <div class="copyrightSocial">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-pinterest-square"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
